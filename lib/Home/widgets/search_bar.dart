@@ -10,7 +10,8 @@ class HeaderSearch extends ConsumerWidget {
     return Row(
       children: [
         Expanded(
-            child: SizedBox(
+            child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           child: TextField(
             onChanged: (newValue) {
               ref.read(inputTextProvider.notifier).setInput(newValue);

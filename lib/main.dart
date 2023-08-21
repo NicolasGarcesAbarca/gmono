@@ -14,25 +14,18 @@ final inputTextProvider =
   return InputTextNotifier(input: "boom");
 });
 
-class App extends ConsumerWidget {
+class App extends StatelessWidget {
   const App({super.key});
 
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final String value = ref.watch(inputTextProvider);
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'GMONO',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
-      home: Column(
-        children: [
-          const Expanded(child: Home(title: 'Busca GIF')),
-          Text(value)
-        ],
-      ),
+      home: const Home(title: 'Busca GIF'),
     );
   }
 }
