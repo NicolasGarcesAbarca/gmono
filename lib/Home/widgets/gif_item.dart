@@ -9,9 +9,10 @@ class GifItem extends StatelessWidget {
   Widget build(BuildContext context) {
     if (url != null) {
       return SizedBox(
-        height: 160,
+        height: 200.0,
+        width: 700.0,
         child: FittedBox(
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
           child: Image.network(url ?? backup),
         ),
       );

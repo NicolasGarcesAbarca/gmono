@@ -26,7 +26,7 @@ class ListGifState extends ConsumerState<ListGif> {
     super.initState();
     developer.log("init state");
     _error = false;
-    _loading = true;
+    _loading = false;
     _offset = 0;
     _listGif = [];
   }
