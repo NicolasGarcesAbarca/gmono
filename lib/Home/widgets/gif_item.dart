@@ -16,7 +16,8 @@ class GifItem extends StatelessWidget {
       return GestureDetector(
         onTap: () async {
           developer.log("hola");
-          final response = await get(Uri.parse(backup));
+          final response = await get(Uri.parse(url ?? backup));
+          developer.log("url $url");
           final Directory? temp = await getExternalStorageDirectory();
           developer.log('PATH EXT ${temp?.path}');
           final File imageFile = File('${temp?.path}/tempImage.gif');

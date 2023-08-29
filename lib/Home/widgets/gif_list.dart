@@ -98,8 +98,7 @@ class ListGifState extends ConsumerState<ListGif> {
             }
             return Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
-              child: GifItem(
-                  url: _listGif[index].images?.fixedWidthDownsampled?.url),
+              child: GifItem(url: _listGif[index].images?.original?.url),
             );
           });
     }
