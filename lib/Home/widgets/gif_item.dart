@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:developer' as developer;
-// import 'package:share_plus/share_plus.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:http/http.dart';
 
 class GifItem extends StatelessWidget {
@@ -21,6 +21,7 @@ class GifItem extends StatelessWidget {
           developer.log('PATH EXT ${temp?.path}');
           final File imageFile = File('${temp?.path}/tempImage.gif');
           imageFile.writeAsBytesSync(response.bodyBytes);
+          Share.shareFiles([imageFile.path]);
         },
         child: SizedBox(
           height: 200.0,
